@@ -11,6 +11,10 @@
 		BE221DB32C8CFAC60042EAAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE221DB22C8CFAC60042EAAA /* ContentView.swift */; };
 		BE221DB52C8CFAC70042EAAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE221DB42C8CFAC70042EAAA /* Assets.xcassets */; };
 		BE221DB82C8CFAC70042EAAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE221DB72C8CFAC70042EAAA /* Preview Assets.xcassets */; };
+		BE221DBF2C8CFAF00042EAAA /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE221DBE2C8CFAF00042EAAA /* Friend.swift */; };
+		BE221DC12C8CFAFD0042EAAA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE221DC02C8CFAFD0042EAAA /* User.swift */; };
+		BE221DC32C8DCFBB0042EAAA /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE221DC22C8DCFBB0042EAAA /* UserDetails.swift */; };
+		BE221DC52C8DD3EC0042EAAA /* UserDetailsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE221DC42C8DD3EC0042EAAA /* UserDetailsRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		BE221DB22C8CFAC60042EAAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BE221DB42C8CFAC70042EAAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE221DB72C8CFAC70042EAAA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BE221DBE2C8CFAF00042EAAA /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		BE221DC02C8CFAFD0042EAAA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BE221DC22C8DCFBB0042EAAA /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
+		BE221DC42C8DD3EC0042EAAA /* UserDetailsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +59,13 @@
 		BE221DAF2C8CFAC60042EAAA /* FriendViewer */ = {
 			isa = PBXGroup;
 			children = (
-				BE221DB02C8CFAC60042EAAA /* FriendViewerApp.swift */,
-				BE221DB22C8CFAC60042EAAA /* ContentView.swift */,
 				BE221DB42C8CFAC70042EAAA /* Assets.xcassets */,
+				BE221DB22C8CFAC60042EAAA /* ContentView.swift */,
+				BE221DC22C8DCFBB0042EAAA /* UserDetails.swift */,
+				BE221DC42C8DD3EC0042EAAA /* UserDetailsRow.swift */,
+				BE221DBE2C8CFAF00042EAAA /* Friend.swift */,
+				BE221DC02C8CFAFD0042EAAA /* User.swift */,
+				BE221DB02C8CFAC60042EAAA /* FriendViewerApp.swift */,
 				BE221DB62C8CFAC70042EAAA /* Preview Content */,
 			);
 			path = FriendViewer;
@@ -137,6 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE221DC12C8CFAFD0042EAAA /* User.swift in Sources */,
+				BE221DBF2C8CFAF00042EAAA /* Friend.swift in Sources */,
+				BE221DC52C8DD3EC0042EAAA /* UserDetailsRow.swift in Sources */,
+				BE221DC32C8DCFBB0042EAAA /* UserDetails.swift in Sources */,
 				BE221DB32C8CFAC60042EAAA /* ContentView.swift in Sources */,
 				BE221DB12C8CFAC60042EAAA /* FriendViewerApp.swift in Sources */,
 			);
