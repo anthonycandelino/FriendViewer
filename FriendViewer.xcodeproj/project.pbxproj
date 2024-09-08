@@ -15,6 +15,7 @@
 		BE221DC12C8CFAFD0042EAAA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE221DC02C8CFAFD0042EAAA /* User.swift */; };
 		BE221DC32C8DCFBB0042EAAA /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE221DC22C8DCFBB0042EAAA /* UserDetails.swift */; };
 		BE221DC52C8DD3EC0042EAAA /* UserDetailsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE221DC42C8DD3EC0042EAAA /* UserDetailsRow.swift */; };
+		BE221DC72C8E1A470042EAAA /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE221DC62C8E1A470042EAAA /* UserListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		BE221DC02C8CFAFD0042EAAA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BE221DC22C8DCFBB0042EAAA /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		BE221DC42C8DD3EC0042EAAA /* UserDetailsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsRow.swift; sourceTree = "<group>"; };
+		BE221DC62C8E1A470042EAAA /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				BE221DB42C8CFAC70042EAAA /* Assets.xcassets */,
 				BE221DB22C8CFAC60042EAAA /* ContentView.swift */,
+				BE221DC62C8E1A470042EAAA /* UserListView.swift */,
 				BE221DC22C8DCFBB0042EAAA /* UserDetails.swift */,
 				BE221DC42C8DD3EC0042EAAA /* UserDetailsRow.swift */,
 				BE221DBE2C8CFAF00042EAAA /* Friend.swift */,
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE221DC72C8E1A470042EAAA /* UserListView.swift in Sources */,
 				BE221DC12C8CFAFD0042EAAA /* User.swift in Sources */,
 				BE221DBF2C8CFAF00042EAAA /* Friend.swift in Sources */,
 				BE221DC52C8DD3EC0042EAAA /* UserDetailsRow.swift in Sources */,

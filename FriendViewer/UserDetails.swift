@@ -5,6 +5,7 @@
 //  Created by Anthony Candelino on 2024-09-08.
 //
 
+import SwiftData
 import SwiftUI
 
 struct UserDetails: View {
@@ -82,36 +83,34 @@ struct UserDetails: View {
         return formatter.string(from: date)
     }
     
-    func getFriendUser(allUsers: [User], friendId: String) -> User? {
+    func getFriendUser(allUsers: [User], friendId: UUID) -> User? {
         allUsers.first(where: {$0.id == friendId})
     }
     
 }
 
 #Preview {
-    NavigationView {
-        UserDetails(
-            user: User(
-                id: "123",
-                isActive: true,
-                name: "John Smith",
-                age: 23,
-                company: "Workplace",
-                email: "johnsmith@gmail.com",
-                address: "123 Main St",
-                about: "Loves programming and the outdoors",
-                registered: .now,
-                tags: [
-                    "Fisherman",
-                    "Programmer",
-                    "Hiker"
-                ],
-                friends: [Friend(
-                    id: "12345",
-                    name: "Joey Apple"
-                )]
-            ),
-            allUsers: []
-        )
-    }
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(for: User.self, configurations: config)
+    
+    return UserDetails(
+        user: User(
+            id: UUID(),
+            isActive: true,
+            name: "John Smith",
+            age: 23,
+            company: "Workplace",
+            email: "johnsmith@gmail.com",
+            address: "123 Main St",
+            about: "Loves programming and the outdoors",
+            registered: .now,
+            tags: [
+                "Fisherman",
+                "Programmer",
+                "Hiker"
+            ],
+            friends: []
+        ),
+        allUsers: []
+    ).modelContainer(container)
 }
