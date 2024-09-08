@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List(users) { user in
-                NavigationLink(destination:  UserDetails(user: user)) {
+                NavigationLink(destination: UserDetails(user: user, allUsers: users)) {
                     HStack {
                         Image(systemName: user.isActive ? "wifi" : "wifi.slash")
                             .foregroundColor(user.isActive ? .blue : .gray)

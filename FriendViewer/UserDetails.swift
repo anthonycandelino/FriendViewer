@@ -9,6 +9,7 @@ import SwiftUI
 
 struct UserDetails: View {
     var user: User
+    var allUsers: [User]
     
     var body: some View {
         VStack {
@@ -37,34 +38,39 @@ struct UserDetails: View {
                                     Image(systemName: "number")
                                     Text(tag)
                                 }
-                                    .padding(.horizontal, 10)
-                                    .padding(.vertical, 10)
-                                    .background(Color.blue.opacity(0.1))
-                                    .foregroundColor(.blue)
-                                    .clipShape(Capsule())
+                                .padding(10)
+                                .background(Color.blue.opacity(0.1))
+                                .foregroundColor(.blue)
+                                .clipShape(Capsule())
                             }
                         }
                     }
                 }
                 
                 Section(header: Text("Friends")) {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            ForEach(user.friends) { friend in
+                    ForEach(user.friends) { friend in
+                        if let friendUser = getFriendUser(allUsers: allUsers, friendId: friend.id) {
+                            NavigationLink(destination: UserDetails(user: friendUser, allUsers: allUsers)) {
                                 HStack {
                                     Image(systemName: "person.circle")
-                                    Text(friend.name)
+                                    Text(friendUser.name)
+                                        .font(.title3)
+                                        .padding(.leading, 5)
+                                        .padding(.vertical, 8)
                                 }
-                                    .padding(.horizontal, 10)
-                                    .padding(.vertical, 10)
-                                    .background(Color.blue.opacity(0.1))
-                                    .foregroundColor(.blue)
-                                    .clipShape(Capsule())
+                                .foregroundColor(.blue)
+                            }
+                        } else {
+                            HStack {
+                                Image(systemName: "person.circle")
+                                Text(friend.name)
+                                    .font(.title3)
+                                    .padding(.leading, 5)
+                                    .padding(.vertical, 8)
                             }
                         }
                     }
                 }
-                
             }
             .navigationTitle(user.name)
         }
@@ -75,6 +81,11 @@ struct UserDetails: View {
         formatter.dateFormat = "MMMM d, yyyy"
         return formatter.string(from: date)
     }
+    
+    func getFriendUser(allUsers: [User], friendId: String) -> User? {
+        allUsers.first(where: {$0.id == friendId})
+    }
+    
 }
 
 #Preview {
@@ -99,7 +110,8 @@ struct UserDetails: View {
                     id: "12345",
                     name: "Joey Apple"
                 )]
-            )
+            ),
+            allUsers: []
         )
     }
 }
